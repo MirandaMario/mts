@@ -1,0 +1,15 @@
+
+
+
+#muestra { color: #000; font: 70%/70% Georgia, "Times New Roman", Times, serif; }
+
+#cabecera, #menu, #lateral, #comentarios {
+    display: none !important;
+  }
+
+  body, #contenido, #principal, #pie {
+    float: none !important;
+    width: auto !important;
+    margin:  0 !important;
+    padding: 0 !important;
+  }
