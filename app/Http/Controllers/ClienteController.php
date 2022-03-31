@@ -71,7 +71,7 @@ class ClienteController extends Controller
         $persona->iva = $request->get('iva');
         $persona->forma_pago = $request->get('forma_pago');
         $persona->municipio = $request->get('id_municipio');
-        $persona->tipo_contribuyente = $request->get('tipo_contribuyente');
+        $persona->tipo_contribuyente = 'Pequeño';
 
         $persona->contacto = $request->get('contacto');
         $persona->tel = $request->get('tel');

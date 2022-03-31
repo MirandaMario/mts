@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>MI NEGOCIO{{-- config('app.name', 'Laravel') --}}</title>
+    <title>MULTI SALUD{{-- config('app.name', 'Laravel') --}}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body {{-- style="background-color:lightslategrey" --}} style="background-image: url('{{asset('imagenes/cama2.jpg')}}'); background-position: center; background-repeat: no-repeat;">
+<body {{-- style="background-color:lightslategrey" --}} style="background-image: url('{{asset('imagenes/mts.png')}}'); background-position: center; background-repeat: no-repeat;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">

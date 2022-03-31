@@ -29,12 +29,18 @@ input[type=number]::-webkit-outer-spin-button {
 .bgd {
     background-color: #EEEEEE !important;  
     margin-left: 0;
+    
 }
 
 .a{
-    width: 60px;
+    width: 65px;
 }
 
+.borde_ex{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
  
 /**PANEL TICKET**/
 .fixed-panel { height: 600px; overflow-y: scroll; }

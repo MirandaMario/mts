@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Listado Clientes')
+@section('title','Listado Paciente/Responsable')
 @section('contenido')
 <!--<link href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet"/>-->
 <link rel="stylesheet" href="{{asset('css/jquery.dataTables.min.css')}}">
@@ -22,7 +22,7 @@
                     {{Form::close()}} 
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pa text-right">    
-                Listado de Clientes
+                Listado de Paciente/Responsable
                 <p class="navbar-text navbar-right" style="margin-top: 1px; text-align: right;">
                   <a href="cliente/create"><button class="btn btn-warning navbar-btn" id="nuevo" name="nuevo" style="margin-bottom: 1px; margin-top: -5px;margin-right: 8px;padding: 3px 20px;" type="button">Nuevo</button></a>
                 </p>

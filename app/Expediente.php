@@ -12,7 +12,9 @@ class Expediente extends Model
     protected $fillable = [
         'numero_expediente', 
         'id_paciente', 
-        'id_ciente',
+        'id_cliente',
+        'tel_cliente',  //puso liss
+        'tel_cliente2', //puso liss
         'habitacion', 
         'fecha_hora_ex', 
         //Datos aseguradora

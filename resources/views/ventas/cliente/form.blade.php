@@ -6,15 +6,15 @@
 @php
 use App\Persona;
 @endphp
-<div class="row" style=" {{ config('constantes.FONT') }}">
+<div class="row" >
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pa">
         <div class="panel panel-primary">
             @if (isset($persona))
-            <div class="panel-heading" style="font-size:150%; height: 40px;">Editar Cliente</div>
+            <div class="panel-heading" style="font-size:150%; height: 40px;">Editar Paciente/Responsable</div>
             <div class="panel-body">
                 {!!Form::model($persona,['method'=>'PATCH','autocomplete'=>'off','route'=>['cliente.update',$persona->idpersona]])!!}
                 @else
-                <div class="panel-heading" style="font-size:150%; height: 40px;">Nuevo Cliente</div>
+                <div class="panel-heading" style="font-size:150%; height: 40px;">Nuevo Paciente/Responsable</div>
                 <div class="panel-body">
                     {!!Form::open(array('url'=>'cliente','method'=>'POST','autocomplete'=>'off', 'id'=>'cliente_form'))!!}
                     @endif
@@ -87,8 +87,6 @@ use App\Persona;
                             </div>
                         </div>
 
-
-
                         <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
                             <div class="form-group">
                                 <div class="input-group">
@@ -109,7 +107,9 @@ use App\Persona;
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="row">
                         <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
                             <div class="form-group">
                                 <div class="input-group">
@@ -132,15 +132,30 @@ use App\Persona;
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12 pa">
+                        <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <div class="input-group-addon bgd"> <b><label class="a">Giro</label></b></div>
-                                    <input type="text" name="giro"
-                                        value="{{isset($persona->giro) ?  $persona->giro :old('giro')}}"
-                                        class="form-control" placeholder="Giro..." />
+                                    <div class="input-group-addon bgd"><b><label class="a">F. Nac</label></b></div>
+                                    <input type="text" name="fecha_nac"
+                                        value="{{isset($persona->fecha_nac) ?  $persona->fecha_nac : old('fecha_nac')}}"
+                                        class="form-control" placeholder="F. Nac..." />
                                 </div>
+                            </div>
+                        </div>
 
+                        <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon bgd"><b><label class="a">FormaPago</label></b></div>
+                                    <select class="form-control" name="forma_pago" id="forma_pago">
+                                        <option value="Credito"
+                                            {{ isset($persona->iva) ? $persona->forma_pago == 'Credito' ? 'selected' : ""  : old('forma_pago') == "Credito" ? "selected" : ""}}>
+                                            Crédito</option>
+                                        <option value="Contado"
+                                            {{ isset($persona->iva) ? $persona->forma_pago == 'Contado' ? 'selected' : ""  : old('forma_pago') == "Contado" ? "selected" : ""}}>
+                                            Contado</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -156,8 +171,19 @@ use App\Persona;
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12 pa">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon bgd"> <b><label class="a">Giro</label></b></div>
+                                    <input type="text" name="giro"
+                                        value="{{isset($persona->giro) ?  $persona->giro :old('giro')}}"
+                                        class="form-control" placeholder="Giro..." />
+                                </div>
 
-                        <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
+                            </div>
+                        </div>
+                     {{--    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-addon bgd"><b><label class="a">Tipo Contr.</label></b></div>
@@ -174,24 +200,13 @@ use App\Persona;
                                     </select>
                                 </div>
                             </div>
-                        </div>
-                        {{--  @dump($errors) --}}
-                        <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-addon bgd"><b><label class="a">FormaPago</label></b></div>
-                                    <select class="form-control" name="forma_pago" id="forma_pago">
-                                        <option value="Credito"
-                                            {{ isset($persona->iva) ? $persona->forma_pago == 'Credito' ? 'selected' : ""  : old('forma_pago') == "Credito" ? "selected" : ""}}>
-                                            Crédito</option>
-                                        <option value="Contado"
-                                            {{ isset($persona->iva) ? $persona->forma_pago == 'Contado' ? 'selected' : ""  : old('forma_pago') == "Contado" ? "selected" : ""}}>
-                                            Contado</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        {{--     --}}
+                        </div> --}}
+                    </div>
+
+             {{--        <div class="row">
+                    
+                   
+                     
                         <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
                             <div class="form-group">
                                 <div class="input-group">
@@ -210,10 +225,10 @@ use App\Persona;
                         </div>
 
                     </div>
-
+ --}}
 
                 <!--credenciales cliente  -->
-                    <div class="row">
+             {{--        <div class="row">
                         <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12 pa">
                             <div class="form-group">
                                 <div class="input-group">
@@ -234,7 +249,7 @@ use App\Persona;
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!--contacto  -->
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 pa">

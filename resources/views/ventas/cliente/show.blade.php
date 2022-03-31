@@ -3,10 +3,10 @@
 @section('contenido')
 <link rel="stylesheet" href="{{asset('css/estilo.css')}}">
 
-<div class="row" style=" {{ config('constantes.FONT') }}">
+<div class="row">
     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 pa">
         <div class="panel panel-primary">
-            <div class="panel-heading" style="font-size:150%; height: 40px;">Datos de Cliente</div>
+            <div class="panel-heading" style="font-size:150%; height: 40px;">Datos de Paciente/Responsable</div>
                 <div class="panel-body">
                      <div class="table-responsive">
                            <table class="table table-bordered-striper table-hover table-responsive table-striped" style="font-size:100%; width:69;">
@@ -38,14 +38,13 @@
                                    <tr>
                                         <td >PAGO</td>
                                         <td ><b>{{strtoupper($persona->forma_pago)}} </b></td>
-                                        <td >ESTADO</td>
-                                       <td ><b>{{strtoupper($persona->estado)}} </b></td>
-                                       
-                                   </tr>
-                                  
-                                   <tr>
                                         <td >GIRO</td>
                                         <td ><b>{{strtoupper($persona->giro)}} </b></td>  
+                                   </tr>
+                                         {{-- <td >ESTADO</td>
+                                       <td ><b>{{strtoupper($persona->estado)}} </b></td> --}}
+                                   <tr>
+                                        
                                    </tr>
                                   
                                 </table>

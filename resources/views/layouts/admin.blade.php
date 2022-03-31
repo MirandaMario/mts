@@ -109,7 +109,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="{{url('proveedor')}}"><i class="fa fa-child"></i> Proveedores</a></li>
-                            <li><a href="{{url('cliente')}}"><i class="fa fa-users" aria-hidden="true"></i> Clientes</a>
+                            <li><a href="{{url('cliente')}}"><i class="fa fa-users" aria-hidden="true"></i>Paciente/Responsable</a>
                             <li><a href="{{url('marca')}}"><i class="fa fa-circle-o"></i> Marcas </a></li>
                             <li><a href="{{url('categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
                             <li><a href="{{url('modelo')}}"><i class="fa fa-circle-o"></i> Modelos</a></li>
@@ -160,13 +160,13 @@
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-th"></i>
+                    <a href="#"  >
+                        <i class="fa fa-th" id="expediente"></i>
                         <span>Expediente</span>
-                        <i class="fa fa-angle-left pull-right"></i>
+                        <i class="fa fa-angle-left pull-right"  ></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{url('expediente')}}"><i class="fa fa-bars" aria-hidden="true"></i>Expediente</a></li>
+                        <li><a href="{{url('expediente')}}" ><i class="fa fa-bars" aria-hidden="true"></i>Expediente</a></li>
                                     
                     </ul>
                 </li>
